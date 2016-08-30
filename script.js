@@ -1,4 +1,4 @@
-var API_KEY = 'XqOWfNwdxmBbqxw3WxIGbGDM5xTbEUWn0VosIYi242rbe2jhijhwDSxiignHtNaJLEvBX1xxYbpFLiay';
+var API_KEY = 'YOUR_APP_API_KEY_HERE';
 
 // Instantiate an EVRYTHNG Application Object
 var app = new EVT.App(API_KEY);
