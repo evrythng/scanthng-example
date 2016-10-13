@@ -1,9 +1,9 @@
-var API_KEY = 'YOUR_APP_API_KEY_HERE';
+var APP_API_KEY = 'YOUR_APP_API_KEY_HERE';
 
 // Instantiate an EVRYTHNG Application Object
-var app = new EVT.App(API_KEY);
+var app = new EVT.App(APP_API_KEY);
 
-// Configure ScanThng
+// Configure SCANTHNG
 EVT.use(EVT.Scan);
 EVT.Scan.setup({
   redirect: false,
