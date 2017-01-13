@@ -1,13 +1,10 @@
 var APP_API_KEY = 'YOUR_APP_API_KEY_HERE';
 
+// Use SCANTHNG
+EVT.use(EVT.Scan);
+
 // Instantiate an EVRYTHNG Application Object
 var app = new EVT.App(APP_API_KEY);
-
-// Configure SCANTHNG
-EVT.use(EVT.Scan);
-EVT.Scan.setup({
-  redirect: false,
-});
 
 $('#scanAnything button').click(scanProduct);
 $('#clearResults button').click(clearResults);
@@ -29,27 +26,24 @@ function clearResults() {
   $('#product').empty();
 }
 
-// Call Back when image detection returns an error
+// Callback for when image detection returns an error
 function scanError(error) {
-  addResults('Error', JSON.stringify(error, null, 2));
+  addResults('Scan Error', JSON.stringify(error, null, 2));
 }
 
-// Call back when a product has been identified
-function scanSuccess(data) {
-  addResults('Scan Successful', JSON.stringify(data, null, 2));
+// Callback for when a product has been identified
+function scanSuccess(res) {
+  addResults('Scan Successful', JSON.stringify(res, null, 2));
 
-  app.appUser().create({
-    anonymous: true
-  }).then(function(anonUser) {
-    anonUser.product(data.evrythngId).read().then(function(product) {
-      addProduct(JSON.stringify(product, null, 2));
-    });
-  });
+  var result = res[0].results[0];
+  addProduct(JSON.stringify(result.product, null, 2));
 }
 
 function scanProduct() {
   clearResults();
-  app.scan()
-    .then(scanSuccess)
+  app.scan({
+    filter: 'method=2d&type=qr_code',
+    createAnonymousUser: true
+  }).then(scanSuccess)
     .catch(scanError);
 }
