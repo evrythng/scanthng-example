@@ -1,19 +1,9 @@
-:root {
-  --brand-teal: #2B95A3;
-  --brand-light-grey: #e8e8e8;
-  --brand-dark-grey: #a6a6a6;
-}
-
 html, body { 
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-}
-
-body {
-  color: #434343;
 }
 
 .root-container {
@@ -25,56 +15,49 @@ body {
 }
 
 .navbar {
-  font-family: sans-serif;
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 60px;
   align-items: center;
   color: white;
-  background-color: var(--brand-teal);
+  background-color: #2B95A3;
+  font-family: sans-serif;
   font-size: 1.4rem;
   text-align: center;
 }
 
 .content {
-  width: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
   font-family: sans-serif;
   text-align: center;
 }
 
 .title {
-  font-size: 1.5rem;
   padding-top: 10px;
+  font-size: 1.5rem;
 }
 
 .description {
   max-width: 80%;
+  padding-top: 10px;
   margin: auto;
   font-size: 1.1rem;
-  padding-top: 10px;
 }
 
 .button {
+  width: 150px;
   margin: auto;
   margin-top: 20px;
-  cursor: pointer;
   padding: 10px;
-  width: 150px;
   background-color: #000;
   color: white;
-  /*box-shadow: 0px 2px 3px black;*/
-}
-
-.button:active {
-  transform: translateY(2px);
-  box-shadow: 0 0 0 rgb(0,0,0,0);
+  cursor: pointer;
 }
 
 .stream-container {
-  background: #DDD;
   width: 200px;
   height: 150px;
   margin: auto;
@@ -82,6 +65,7 @@ body {
   border-radius: 10px;
   -webkit-clip-path: inset(1px 1px 1px 1px round 5% 5% 5% 5%);
   clip-path: inset(1px 1px 1px 1px round 5% 5% 5% 5%);
+  background: #DDD;
 }
 
 video {
@@ -95,12 +79,11 @@ video {
 
 .result {
   min-width: 250px;
-  font-size: 1rem;
-  color: #434343;
   margin: auto;
   margin-top: 20px;
   padding: 10px;
   border: 1px solid #0005;
+  font-size: 1rem;
 }
 
 .brand-logo {
