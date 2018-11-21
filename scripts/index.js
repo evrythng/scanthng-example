@@ -35,8 +35,8 @@ const startCamera = () => {
     filter: { method: '2d', type: 'qr_code' },
     containerId: CONTAINER_ID,
   })
-  .then(handleResults)
-  .catch(alert);
+    .then(handleResults)
+    .catch(alert);
 };
 
 const main = () => {
