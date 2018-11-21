@@ -1,46 +1,33 @@
 <!DOCTYPE html>
-<head lang="en">
-</head>
-<body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-4">
-        <p>
-          <div id="scanAnything">
-            <button type="button" class="btn btn-primary center-block">Scan Anything</button>
-          </div>
-        </p>
-        <p>
-          <div id="clearResults">
-            <button type="button" class="btn btn-primary center-block">Clear Results </button>
-          </div>
-        </p>
+<html>
+  <head>
+    <title>EVRYTHNG Streaming Scanner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  </head>
+  <body>
+    <div class="root-container">
+      <div class="navbar">
+        <img class="brand-logo" src="./assets/logo.png">
       </div>
-      <div class="col-md-8">
-        <div id="output-area">
-          <div id="header"></div>
-          <div id="results"></div>
-          <div id="product"></div>
+      <div class="content">
+        <div class="title">Scan a Product</div>
+        <div class="description">Use this app to scan a QR code within the browser.</div>
+
+        <div id="stream_container" class="stream-container">
+          <!-- Video stream is inserted here -->
         </div>
+        <div id="button" class="button">Start Camera</div>
+        <a id="result" class="result" target="_blank">No results yet.</a>
       </div>
     </div>
-  </div>
 
-  <!-- jQuery and Bootstrap -->
-  <script src="https://code.jquery.com/jquery-1.9.1.min.js" integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script>
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="styles.css"/>
-
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-  <!--EVRYTHNG.js-->
-  <script src="http://cdn.evrythng.net/toolkit/evrythng-js-sdk/evrythng-4.2.0.min.js"></script>
-
-  <!--EVRYTHNG-SCAN.js-->
-  <script src="http://cdn.evrythng.net/toolkit/evrythng-js-sdk/evrythng-scan-2.0.0.min.js"></script>
-
-  <script src="script.js"></script>
-
-</body>
+    <!-- Dependencies -->
+    <script type="text/javascript" src="lib/jsQR.js"></script>
+    <script src="https://d10ka0m22z5ju5.cloudfront.net/toolkit/evrythng-js-sdk/evrythng-extended-4.7.2.min.js"></script>
+    <script type="text/javascript" src="lib/scanthng-3.1.0.min.js"></script>
+    
+    <!-- App -->
+    <script type="text/javascript" src="scripts/index.js"></script>
+  </body>
+</html>
