@@ -1,5 +1,10 @@
 # scanthng-example
 
-Example project using SCANTHNG to scan and track physical products in the cloud. 
+Example project using [`scanthng.js`](https://github.com/evrythng/scanthng.js) 
+to scan and identify physical products in the EVRYTHNG Platform using all kinds
+of barcodes and training images.
 
-Read the [walkthrough](https://developers.evrythng.com/docs/scan-and-track-with-scanthng) for more information.
+Requires a copy of [jsQR](https://github.com/cozmo/jsQR) placed in `lib`.
+
+Read the walkthrough on the EVRYTHNG 
+[Developer Hub](https://developers.evrythng.com) for more information.
