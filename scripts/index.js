@@ -49,7 +49,7 @@ const onScanSuccess = (res) => {
 };
 
 /**
- * Stard the camera stream and handle results.
+ * Start the camera stream and handle results.
  */
 const startCamera = () => {
   const opts = {
